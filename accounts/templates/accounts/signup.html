@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+{%block content%}
+<style>
+	
+</style>
+
+<br />
+<br />
+<br />
+
+<br>
+<form class="form1" method = "POST" action ="{%url 'signup'%}">
+
+{%csrf_token%}
+Username:
+<br>
+<input type="text" name="username" />
+<br>
+Password:
+<br />
+<input type="password" name="password1" />
+<br>
+Confrim Password:
+<br>
+<input type="password" name="password2" />
+<br />
+<br />
+<input class="button1 btn-primary" type="submit" value="Sign Up!" />
+<br/>
+<br/>
+<br/>
+{%if error%}
+{{error}}
+<br />
+{% endif%}
+
+</form>
+
+
+{%endblock%}

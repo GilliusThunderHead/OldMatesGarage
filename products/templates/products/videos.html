@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{%block content%}
+<div class="container" "pt-5">
+<br><br><br><br><br>
+<h1 class="jumbotron-heading"  style="color:red; font-family:serif;  font-size:300%; text-align:center; "><i>Checkout the latest Videos.</i></h1>
+<br>
+
+{%for product in products.all%}
+	<div class="row pt-3">
+		<div class="col-2" onclick="window.location='{% url 'detail' product.id%}';" style="cursor: pointer;" >
+			<img src="{{product.icon.url}}" class="img-fluid"/>
+		</div>
+		<div class="col-6" onclick="window.location='{% url 'detail' product.id%}';" style="cursor: pointer;" >
+			<h1>{{product.title}}</h1></a>
+			<p>{{product.summary}} </p>
+		</div>
+		<div class="col-2">
+			<a href="javascript:{document.getElementById('upvote{{product.id}}').submit()}" <button class="button1 btn-primary btn-lg btn-block">Likes <span class="oi oi-thumb-up"></span> {{product.votes_total}}</button></a>
+		</div>
+		
+		<form id="upvote{{product.id}}" method="POST" action="{% url 'upvote' product.id %}">
+		{%csrf_token%}
+		<input type="hidden">
+		</form>
+	</div>
+{% endfor%}
+</div>
+
+{%endblock%}

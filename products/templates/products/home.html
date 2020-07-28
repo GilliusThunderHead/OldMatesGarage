@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+
+{%block content%}
+<div class="container" "pt-5">
+
+	{% if user.is_authenticated %}
+		<br><br><br><br>
+		<div class="row">
+			<div class="col-3" style="font-family:serif;"><h1>Ahoy There Lads!!</h1>
+			<p>Here's the site. As you can see it's still a work in progress. That said, we can upload and view videos which is really no big deal these days. The only good thing is it's a private site so shit won't get taken down unless I take it down! I'm going to add a blog page where we can write/upload stuff and also comment on each others posts. If you have any other ideas for the page let me know.</p>
+			</div>
+				<div class="col-6">
+					<img class="displayed1" "pt-5" width="100%" height="100%"  src= "{% static 'dragon.png' %}" />
+				</div>	
+				<div class="col-3" style="font-family:serif;"> 
+				<h1>Shenanigans:</h1>
+				<h2>noun:</h2>
+				<p>Secret or dishonest activity or manoeuvring. "the boys were accused of fuckery at the highest levels" - silly or high-spirited behaviour; mischief.<p>
+				</div>
+				</div>									 			
+		<br><br><br><br>
+		<div/>
+	{% else %}
+		<br><br><br><br>
+		<div class="row">
+			<div class="col-3">
+			</div>
+				<div class="col-6">
+					<img class="displayed1" "pt-5" width="100%" height="100%"  src= "{% static 'dragon.png' %}" />
+				</div>	
+				<div class="col-3"> 
+													 			
+		<br><br><br><br>
+		
+	{%endif%}	
+</div>
+{%endblock%}
+
+
