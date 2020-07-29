@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'Site3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'producthuntdb',
+        'NAME': 'oldmatedb',
 		'USER':'postgres',
-		'PASSWORD':'Connor2015!',
+		'PASSWORD':'',
 		'HOST':'localhost',
 		'PORT':'5432',
     }
