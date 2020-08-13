@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%i=hv852ob*5=p@2^z9z7a5ght&%xnj(cdww0ol=kfa#xan8dz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'Site3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['Site3/templates'],
+        'DIRS': ['Site3/templates','accounts/templates','products/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
