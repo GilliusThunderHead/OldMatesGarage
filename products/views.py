@@ -22,7 +22,7 @@ def create (request):
 			#else:
 			#	product.url='http://' + request.POST['url']
 			#product.icon=request.FILES['icon']
-			#product.image=request.FILES['image']
+			#odbyproduct.image=request.FILES['image']
 			product.video=request.FILES['video']
 			product.pub_date=timezone.datetime.now()	
 			product.hunter=request.user
